@@ -1,0 +1,77 @@
+@import "./variables";
+
+@mixin flexCenter($direction) {
+  display: flex;
+  justify-content: center;
+  flex-direction: $direction;
+}
+
+@function font-family($family-name) {
+  @return map-get($font-families, $family-name)
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: $mid-lightcolor;
+  font-family:font-family(body);
+}
+
+.App {
+  width: 100vw;
+  height: 100vh;
+  margin-top: 70px;
+
+  #{&}-title {
+    text-align: center;
+    font-family: font-family(title);
+    font-size: 60px;
+    color: $darkcolor;
+  }
+}
+
+.CreateNote {
+  @include flexCenter(row);
+  margin: 80px 0px;
+
+  form {
+    @include flexCenter(column);
+    width: 500px;
+    margin: 20px auto;
+    box-shadow: 0 2px 10px $mid-darkcolor;
+    background-color: $lightcolor;
+    position: relative;
+    
+
+     & input,
+     & textarea {
+      width: 100%;
+      border: none;
+      outline: none;
+      padding: 10px;
+      font-size: 20px;
+      background-color: $lightcolor;
+      outline: none;
+      color: $darkcolor;
+    }
+
+    & button {
+      background-color: $mid-darkcolor;
+      width: 50px;
+      height: 50px;
+      border: none;
+      border-radius: 50%;
+      color: $lightcolor;
+      cursor: pointer;
+      outline: none;
+      position: absolute;
+      right: 20px;
+      bottom: -20px;
+      font-size: 25px;
+    }
+  }
+}

@@ -1,11 +1,11 @@
 import React from "react";
 
-export default function AddedNote() {
+export default function AddedNote(props) {
   return (
     <div className="AddedNote">
-      <h1>Title</h1>
-      <p>content...</p>
-      <button>DELETE</button>
+      <h1>{props.title}</h1>
+      <p>{props.content}</p>
+      <button onClick={()=> props.delete(props.id)}>DELETE</button>
     </div>
   )
 }

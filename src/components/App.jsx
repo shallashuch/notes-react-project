@@ -46,6 +46,7 @@ function App() {
         valueContent={content}
         submitNote={submitNote}
       />
+      <div className="notesContainer">
       {notes.map((note, index) => (
         <AddedNote 
           key={index}
@@ -55,6 +56,7 @@ function App() {
           delete={deleteItem}
         />
       ))}
+      </div>
     </div>
   );
 }

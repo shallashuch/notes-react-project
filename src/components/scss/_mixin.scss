@@ -1,0 +1,49 @@
+@mixin flexCenter($direction) {
+  display: flex;
+  justify-content: center;
+  flex-direction: $direction;
+}
+
+@mixin boxStyle {
+  box-shadow: 0 2px 10px $mid-darkcolor;
+  background-color: $lightcolor;
+  position: relative;
+}
+
+@mixin button {
+  background-color: $mid-darkcolor;
+  width: 50px;
+  height: 50px;
+  border: none;
+  border-radius: 50%;
+  color: $lightcolor;
+  cursor: pointer;
+  outline: none;
+  position: absolute;
+  right: 20px;
+  bottom: -20px;
+}
+
+@mixin media-md {
+  @media (min-width: 450px) and (max-width: 700px) {
+    @content;
+  }
+}
+
+@mixin media-sm {
+  @media (min-width: 330px) and (max-width: 449px) {
+    @content;
+  }
+}
+
+@mixin max-449 {
+  @media (max-width: 449px) {
+    @content;
+  }
+}
+
+@mixin media-xs {
+  @media (max-width: 329px) {
+    @content;
+  }
+}

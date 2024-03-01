@@ -12,7 +12,7 @@ body {
 .App {
   width: 100vw;
   height: 100vh;
-  margin-top: 70px;
+  margin-top: 200px;
 }
 .App .App-title {
   text-align: center;
@@ -60,4 +60,106 @@ body {
   right: 20px;
   bottom: -20px;
   font-size: 25px;
+}
+
+.notesContainer {
+  flex-wrap: wrap;
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+}
+.notesContainer .AddedNote {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  padding: 20px 10px;
+  margin: 20px 30px;
+  width: 250px;
+  box-shadow: 0 2px 10px #7743DB;
+  background-color: #FCFDF2;
+  position: relative;
+}
+.notesContainer .AddedNote h1 {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+.notesContainer .AddedNote p {
+  font-size: 16px;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+}
+.notesContainer .AddedNote button {
+  background-color: #7743DB;
+  width: 50px;
+  height: 50px;
+  border: none;
+  border-radius: 50%;
+  color: #FCFDF2;
+  cursor: pointer;
+  outline: none;
+  position: absolute;
+  right: 20px;
+  bottom: -20px;
+  font-size: 10px;
+}
+
+@media (min-width: 450px) and (max-width: 700px) {
+  .App .App-title {
+    font-size: 40px;
+  }
+  .CreateNote form {
+    width: 400px;
+  }
+  .notesContainer .AddedNote {
+    width: 200px;
+  }
+}
+@media (max-width: 449px) {
+  .CreateNote form input, .CreateNote form textarea {
+    font-size: 15px;
+  }
+  .CreateNote form button {
+    font-size: 20px;
+    width: 40px;
+    height: 40px;
+  }
+  .notesContainer .AddedNote button {
+    font-size: 8px;
+    width: 40px;
+    height: 40px;
+  }
+}
+@media (min-width: 330px) and (max-width: 449px) {
+  .App .App-title {
+    font-size: 35px;
+  }
+  .CreateNote form {
+    width: 300px;
+  }
+  .notesContainer .AddedNote {
+    width: 200px;
+  }
+  .notesContainer .AddedNote h1 {
+    font-size: 18px;
+  }
+  .notesContainer .AddedNote p {
+    font-size: 15px;
+  }
+}
+@media (max-width: 329px) {
+  .App .App-title {
+    font-size: 30px;
+  }
+  .CreateNote form {
+    width: 250px;
+  }
+  .notesContainer .AddedNote {
+    width: 150px;
+  }
+  .notesContainer .AddedNote h1 {
+    font-size: 15px;
+  }
+  .notesContainer .AddedNote p {
+    font-size: 12px;
+  }
 }/*# sourceMappingURL=App.css.map */

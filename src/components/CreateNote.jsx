@@ -7,6 +7,7 @@ export default function CreateNote(props) {
         <input  
           name="title" 
           placeholder="Title"
+          required
           value={props.valueTitle}
           onChange={(event)=> {
             props.changeTitle(event);
